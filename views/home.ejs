@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="images/fav/apple-touch-icon.png" />
+    <title>FilterFact || Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    <!-- NavBar -->
+    <%- include("_nav_partial.ejs") %> 
+    <main>
+    <div class="container main-container">
+        <div class="content-wrapper">
+            <h2 class="welcome-heading">Welcome to</h2>
+            <h2 class="display-4">Filter Facts</h2>
+            <p>Where we use Machine Learning algorithms to predict you the truthfulness of your news</p>
+            <form action="/forward" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="text" id="" placeholder="Check your news here" required
+                        autocomplete="off">
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="image-wrapper">
+            <img src="images/undraw_public_discussion_btnw.svg" alt="">
+        </div>
+        <div class='icon-scroll'></div>
+        <!-- <img class="main-image" src="images/logo2.png" alt=""> -->
+    </div>
+    </main>
+    <section class="about-me" id="about-us">
+        <div class="container section-container">
+            <div class="img2-wrapper">
+                <img src="images/undraw_reading_time_gvg0.svg" alt="">
+            </div>
+            <div class="content2-wrapper">
+                <h2 class="about-heading">About FilterFact</h2>
+                <p>This artificial intelligence can predict whether a news article is fake or real based on the words used in the article.
+                    <br><br>
+                <span class="kbd">What do I do?</span>  <br>
+                Enter a news text in the box above, the bot will load the article, extract the visible text, and use Naive Bayes Algorithm to make a prediction of whether the article is fake or real. This may take several seconds because the URL you enter has to
+                be loaded and processed..</p>
+            </div>
+        </div>
+    </section>
+    <%- include("_footer_partial.ejs") %> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+    <script>
+        new Darkmode().showWidget();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
